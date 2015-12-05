@@ -53,6 +53,31 @@ cursorImage.onload = function() {
 };
 cursorImage.src = "cursorTest.png";
 
+//button background
+var emptyButtonReady = false;
+var emptyButtonImage = new Image();
+emptyButtonImage.onload = function() {
+    emptyButtonReady = true;
+};
+emptyButtonImage.src = "emptyButton.png";
+
+var emptyButtonHoverReady = false;
+var emptyButtonHoverImage = new Image();
+emptyButtonHoverImage.onload = function() {
+	emptyButtonHoverReady = true;
+};
+emptyButtonHoverImage.src = "emptyButtonHover.png";
+
+var emptyButtonPressedReady = false;
+var emptyButtonPressedImage = new Image();
+emptyButtonPressedImage.onload = function() {
+	emptyButtonPressedReady = true;
+};
+emptyButtonPressedImage.src = "emptyButtonHover.png";
+
+
+
+
 //enemy assets
 //enemy bullets
 var enemyImgReady = false;
@@ -60,11 +85,18 @@ var enemyImage = new Image();
 enemyImage.onload = function() {
 	enemyImgReady = true;
 };
-enemyImage.src = "Enemy test.png"
+enemyImage.src = "Enemy test.png";
 
 
 
 //background
+var titleScreenReady = false;
+var titleScreenImage = new Image();
+titleScreenImage.onload = function() {
+	titleScreenReady = true;
+};
+titleScreenImage.src = "title screen.png";
+
 //levels
 
 
@@ -345,13 +377,252 @@ addEventListener("keyup", function(e) {
 }, false);
 
 
-function getMousePos(canvas, evt) {
-    var rect = canvas.getBoundingClientRect();
-    return {
-      x: evt.clientX - rect.left,
-      y: evt.clientY - rect.top
-    };
+
+// keyboard input (makes it slightly simpler) 
+// A
+var keyboardA = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
+// B
+var keyboardB = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// C
+var keyboardC = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// D
+var keyboardD = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// E
+var keyboardE = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// F
+var keyboardF = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// G
+var keyboardG = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// H
+var keyboardH = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// I
+var keyboardI = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// J
+var keyboardJ = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// K
+var keyboardK = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// L
+var keyboardL = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// M
+var keyboardM = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// N
+var keyboardN = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// O
+var keyboardO = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// P
+var keyboardP = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// Q
+var keyboardQ = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// R
+var keyboardR = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// S
+var keyboardS = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// T
+var keyboardT = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// U
+var keyboardU = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// V
+var keyboardV = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// W
+var keyboardW = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// X
+var keyboardX = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// Y
+var keyboardY = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// Z
+var keyboardZ = function() {
+	if (65 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// Up arrow
+var keyboardUp = function() {
+	if (38 in keysDown) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
 
 
 //update function
@@ -366,7 +637,8 @@ var update = function(modifier) {
 	//space = 32
 	
 	
-  if (38 in keysDown) { //player holding up
+  //if (38 in keysDown) { //player holding up
+  if (keyboardUp()) {
     player.y -= player.speed * modifier;
   }
   if (40 in keysDown) { //player holding down
