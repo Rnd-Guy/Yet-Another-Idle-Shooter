@@ -1,5 +1,6 @@
 Yet Another Idle Shooter v0.1.0
-
+Made using javascript.
+URL: http://rnd-guy.github.io/Yet-Another-Idle-Shooter/
 
 Currently not working on it for now, intended to be a shoot-em-up with possibly some idle elements or maybe AI.
 
